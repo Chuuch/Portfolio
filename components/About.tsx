@@ -36,10 +36,8 @@ export default function About({}: Props) {
             <p className='text-sm xl:text-base md:text-base text-white'>
                 Hello there! My name is Daniel and this is my portfolio.
                 I got into coding the last few years as a hobby in my free time building
-                basic projects and learning new technologies. After wandering around companies working
-                as customer support, trading support & financial analyst, I decided I finally need to get 
-                a job I would actually enjoy and build a great career. So, what better decision than to
-                turn my hobby into my profession? Programming sparked my interest as there is a certain beauty
+                basic projects and learning new technologies.
+                Programming sparked my interest as there is a certain beauty
                 in building something with a purpose. Personally, I see it as a never ending adventure because you can
                 always keep learning and creating new things!
             </p>
