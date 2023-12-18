@@ -1,10 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import dklogo2 from '../public/dklogo2.jpg'
-import zendesk from '../public/zendesk.png'
-import jira from '../public/jira.png'
-import slack from '../public/slack.png'
+import telerik from '../public/telerik.png'
+import react from '../public/react.png'
+import tailwind from '../public/tailwind.png'
+import firebase from '../public/firebase.png'
+import javascript from '../public/javascript.png'
+import html from '../public/html.png'
+import css from '../public/css.png'
+import certificate from '../public/certificate.png'
 
 type Props = {}
 
@@ -17,40 +21,48 @@ function ExperienceCard({}: Props) {
             transition={{ duration: 1.2 }}
             whileInView={{ opacity: 1, y: 0}}
             viewport={{ once: true }}>
-            <Image src={dklogo2} alt='dk'
+            <Image src={telerik} alt='telerik'
                     className='h-32 w-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'/>
         </motion.div>
 
-        <div className='px-0 md:px-10'>
+        <div className='px-0 md:px-10 flex flex-col items-start'>
             <h4 className='text-white text-4xl font-light'>
-                Trading Support Manager
+                Alpha JavaScript Track
             </h4>
 
             <p className='text-white font-bold text-2xl mt-1'>
-                DraftKings Inc.
+                Telerik Academy
             </p>
 
             <div className='flex space-x-2 my-2'>
-                <Image src={zendesk} alt='zendesk'
-                        className='h-10 w-10 rounded-full'/>
-                <Image src={jira} alt='jira'
-                        className='h-10 w-16 rounded-full'/>
-                <Image src={slack} alt='slack'
-                        className='h-10 w-10 rounded-full'/>
+                <Image src={react} alt='react'
+                        className='h-8 w-9'/>
+                <Image src={tailwind} alt='tailwind'
+                        className='h-8 w-10 rounded-full'/>
+                <Image src={firebase} alt='firebase'
+                        className='h-8 w-8'/>
+                <Image src={javascript} alt='javascript'
+                        className='h-8 w-8'/>
+                <Image src={html} alt='html'
+                        className='h-8 w-8'/> 
+                <Image src={css} alt='css'
+                        className='h-8 w-8'/>
 
             </div>
 
             <p className='uppercase py-5 text-gray-300'>
-                22 MAY 2019 - 31 MAR 2022
+                06 JUL 2023 - 19 DEC 2023
             </p>
 
             <ul className='list-disc space-y-4 ml-5 text-lg text-white'>
-                <li>Provide exceptional customer service through demonstrating product knowledge.</li>
-                <li>Effectively communicate with customers across several channels – phone, email, chat, and social media.</li>
-                <li>Promote the DraftKings brand through conflict resolution abilities and effective communication skills.</li>
-                <li>Advocate for players to help us grow the business.</li>
+                <li>Core Programming Fundamentals</li>
+                <li>Object Oriented Programming</li>
+                <li>Data Structures & Algorithms</li>
+                <li>Web Development</li>
             </ul>
+
         </div>
+        
     </article>
   )
 }
