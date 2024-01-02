@@ -14,8 +14,8 @@ type Props = {}
 
 function ExperienceCard({}: Props) {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px]
-                        snap-center bg-[#000033] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[600px]
+                        snap-center bg-gray-100 p-10 cursor-pointer transition-opacity duration-200 overflow-hidden'>
         <motion.div
             initial={{ y: -100, opacity: 0 }}
             transition={{ duration: 1.2 }}
@@ -26,11 +26,11 @@ function ExperienceCard({}: Props) {
         </motion.div>
 
         <div className='px-0 md:px-10 flex flex-col items-start'>
-            <h4 className='text-white text-4xl font-light'>
+            <h4 className='text-green-500 text-4xl font-light'>
                 Alpha JavaScript Track
             </h4>
 
-            <p className='text-white font-bold text-2xl mt-1'>
+            <p className='font-bold text-2xl mt-1'>
                 Telerik Academy
             </p>
 
@@ -50,11 +50,11 @@ function ExperienceCard({}: Props) {
 
             </div>
 
-            <p className='uppercase py-5 text-gray-300'>
+            <p className='uppercase py-5 text-gray-500'>
                 06 JUL 2023 - 19 DEC 2023
             </p>
 
-            <ul className='list-disc space-y-4 ml-5 text-lg text-white'>
+            <ul className='list-disc space-y-4 ml-5 text-lg'>
                 <li>Core Programming Fundamentals</li>
                 <li>Object Oriented Programming</li>
                 <li>Data Structures & Algorithms</li>
