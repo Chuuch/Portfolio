@@ -14,7 +14,7 @@ import Image from 'next/image';
 
 const Home: NextPage = () => {
  return (
-      <div className='bg-[#000015] text-teal-600 h-screen snap-y snap-mandatory overflow-y-scroll z-0
+      <div className='bg-[#fff] text-gray-500 h-screen snap-y snap-mandatory overflow-y-scroll z-0
                       overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#008080]/80'>
         <Head>
           <title>Daniel's Portfolio</title>
