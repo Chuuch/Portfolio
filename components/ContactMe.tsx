@@ -27,31 +27,12 @@ function ContactMe({}: Props) {
             Contact
         </h3>
 
-        <div className='flex flex-col space-y-10'>
-            <h4 className='text-white text-4xl font-semibold text-center'>
+        <div className='flex flex-col space-y-32'>
+            <h4 className='text-4xl font-semibold text-center'>
                 Like what your see?{' '} 
             <span className='decoration-[#008080]/50 underline'>
                 Let's link up!</span>
             </h4>
-
-            <div className='space-y-10'>
-                <div className='flex items-center space-x-5 justify-center'>
-                    <PhoneIcon className='text-[#008080] h-7 w-7 animate-pulse'/>
-                    <p className='text-2xl text-white'>
-                        +359 876 007 969
-                    </p>
-                </div>
-                    
-                <div className='flex items-center space-x-5 justify-center'>
-                    <EnvelopeIcon className='text-[#008080] h-7 w-7 animate-pulse'/>
-                    <p className='text-2xl text-white'>daniel.chuchulev96@gmail.com</p>
-                </div>
-
-                <div className='flex items-center space-x-5 justify-center'>
-                    <MapPinIcon className='text-[#008080] h-7 w-7 animate-pulse'/>
-                    <p className='text-2xl text-white'>Gen. Radetski str. 3</p>
-                </div>
-            </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
                 <div className='flex space-x-2'>
@@ -63,7 +44,7 @@ function ContactMe({}: Props) {
 
                 <textarea {...register('message')} placeholder='Message' className='contactInput'/>
 
-                <button type='submit' className='bg-[#008080] py-5 px-10 rounded-md text-black font-bold text-lg'>
+                <button type='submit' className='bg-teal-500 py-5 px-10 rounded-md text-black font-bold text-lg'>
                     Submit
                 </button>
             </form>
