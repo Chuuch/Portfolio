@@ -7,6 +7,7 @@ import About from '@/components/About';
 import WorkExperience from '@/components/WorkExperience';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
+import Qualifications from '@/components/Qualifications';
 import ContactMe from '@/components/ContactMe';
 import Link from 'next/link';
 import Profile from '../public/Profile.jpg'
@@ -55,6 +56,10 @@ const Home = ({pageInfo, experiences, skills, projects, socials}: Props) => {
 
       <section id='projects' className='snap-start'>
         <Projects projects={projects}/>
+      </section>
+
+      <section id='qualifications' className='snap-start'>
+        <Qualifications />
       </section>
     
       <section id='contact' className='snap-start'>
