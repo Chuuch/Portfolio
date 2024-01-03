@@ -2,6 +2,7 @@ import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import { Social } from '@/typings';
+import ThemeSwitch from './ThemeSwitch';
 
 type Props = {
 	socials: Social[];
@@ -25,7 +26,7 @@ export default function Header({ socials }: Props) {
 						url={social.url}
 						fgColor="#008080"
 						bgColor="transparent"
-						className="hover:scale-150"
+						className="hover:scale-110"
 					/>
 				))}
 			</motion.div>
@@ -36,8 +37,9 @@ export default function Header({ socials }: Props) {
 				transition={{ duration: 1.5 }}
 				className="flex flex-row items-center cursor-pointer"
 			>
+				<ThemeSwitch />
 				<SocialIcon
-					className="cursor-pointer hover:scale-150"
+					className="cursor-pointer hover:scale-110"
 					network="email"
 					fgColor="#008080"
 					bgColor="transparent"
