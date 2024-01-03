@@ -48,7 +48,10 @@ export default function Hero({ pageInfo }: Props) {
                         </Link>
                     </div>
                     <div className="flex items-center justify-center pt-10 space-x-5 cursor-pointer">
-                        <a className='heroButton flex flex-row'>
+                        <a
+                            href='/CV.pdf'
+                            download={true} 
+                            className='heroButton flex flex-row'>
                             Download CV <HiDownload size={16} className='ml-1'/>
                         </a>
                     </div>
