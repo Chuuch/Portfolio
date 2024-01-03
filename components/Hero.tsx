@@ -7,6 +7,7 @@ import Profile from '../public/Profile.jpg'
 import Link from 'next/link'
 import { PageInfo } from '@/typings'
 import { urlFor } from '@/sanity'
+import { HiDownload } from 'react-icons/hi'
 
 
 type Props = {
@@ -45,6 +46,11 @@ export default function Hero({ pageInfo }: Props) {
                         <Link href='#projects'>
                             <button className='heroButton'>Projects</button>
                         </Link>
+                    </div>
+                    <div className="flex items-center justify-center pt-10 space-x-5 cursor-pointer">
+                        <a className='heroButton flex flex-row'>
+                            Download CV <HiDownload size={16} className='ml-1'/>
+                        </a>
                     </div>
             </div>
       
