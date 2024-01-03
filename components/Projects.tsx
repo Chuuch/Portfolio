@@ -27,28 +27,24 @@ function Projects({}: Props) {
 			>
 				{projects.map((project, i) => (
 					<div key={i} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-						<motion.div
-							initial={{ y: -300, opacity: 0 }}
-							transition={{ duration: 1.2 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
+						<motion.div initial={{ y: -300, opacity: 0 }} transition={{ duration: 1.2 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
 						>
 							<Image
 								src={Forum}
 								alt="Forum"
-								className="w-[700px] h-[300px] rounded-md"
+								className="xl:w-[700px] xl:h-[300px] rounded-md"
 							/>
 						</motion.div>
 
 						<div className="space-y-10 px-0 md:px-10 max-w-6xl">
-							<h4 className="text-white text-4xl font-semibold text-center">
+							<h4 className="text-4xl font-semibold text-center">
 								<span className="underline decoration-[#008080]/50">
 									Case Study {i + 1} of {projects.length}:
 								</span>{' '}
 								DevTalk Forum
 							</h4>
 
-							<p className="text-sm md:text-base md:text-left text-white text-center">
+							<p className="text-sm md:text-base md:text-left text-center">
 							DevTalk Forum is a modern and efficient forum application for software development.
 							This project is built using React, Tailwind CSS, and Firebase Realtime Database to provide users with a seamless and responsive forum experience.
 							The forum includes features such as user registration, login, post creation, 
