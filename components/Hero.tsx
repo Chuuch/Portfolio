@@ -1,26 +1,31 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
 import Image from 'next/image'
 import Profile from '../public/Profile.jpg'
 import Link from 'next/link'
+import { PageInfo } from '@/typings'
+import { urlFor } from '@/sanity'
 
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-export default function Hero({}: Props) {
+export default function Hero({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
-        words: ['Hi, Im Daniel!', 'CodingEnthusiast.tsx', '<Future Full-stack Ninja />'],
+        words: [`Hi, Im Daniel!`, 'CodingEnthusiast.tsx', '<Future Full-stack Ninja />'],
         loop: true,
         delaySpeed: 2000,
     })
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles />
-        <Image className='relative rounded-full h-32 w-32 mx-auto object-cover' src={Profile} alt='profile' />
+        <img className='relative rounded-full h-32 w-32 mx-auto object-cover' src={urlFor(pageInfo?.heroImage).url()} alt='heroImage' />
             <div className='z-20'>
                 <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
-                    Software Engineer
+                    {pageInfo?.role}
                 </h2>
                     <h1 className='text-5xl lg:text-6xl font-semibold px-10 text-teal-600'>
                         <span className='mr-3'>{text}</span>
