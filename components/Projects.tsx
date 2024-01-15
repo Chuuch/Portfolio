@@ -32,14 +32,11 @@ function Projects({ projects }: Props) {
 						<motion.img initial={{ y: -300, opacity: 0 }} transition={{ duration: 1.2 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
 								src={urlFor(project?.image).url()}
 								alt="Forum"
-								className="xl:w-[700px] xl:h-[300px] rounded-md">
+								className="xl:w-[700px] xl:h-[350px] rounded-md">
 						</motion.img>
 
 						<div className="space-y-5 px-0 md:px-10 max-w-6xl">
 							<h4 className="lg:text-4xl text-xl md:text-2xl font-semibold text-center">
-								<span className="underline decoration-[#008080]/50">
-									Case Study {i + 1} of {projects.length}:
-								</span>{' '}
 								{project?.title}
 							</h4>
 								<div className="flex items-center space-x-4 justify-center">
