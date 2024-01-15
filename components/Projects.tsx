@@ -5,6 +5,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Project } from '@/typings';
 import { urlFor } from '@/sanity';
+import Link from 'next/link';
 
 type Props = {
 	projects: Project[];
@@ -32,7 +33,7 @@ function Projects({ projects }: Props) {
 						<motion.img initial={{ y: -300, opacity: 0 }} transition={{ duration: 1.2 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
 								src={urlFor(project?.image).url()}
 								alt="Forum"
-								className="xl:w-[700px] xl:h-[350px] rounded-md">
+								className="xl:w-[700px] xl:h-[350px] rounded-md mt-10">
 						</motion.img>
 
 						<div className="space-y-5 px-0 md:px-10 max-w-6xl">
@@ -51,6 +52,11 @@ function Projects({ projects }: Props) {
 							<p className="text-sm md:text-base md:text-left text-center">
 							{project?.summary}
 							</p>
+							<Link
+							className='flex justify-center hover:text-blue-500 text-base lg:text-lg'
+							href={`${project.linkToBuild}`}>
+								{project.linkToBuild}
+							</Link>
 						</div>
 					</div>
 				))}
