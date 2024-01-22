@@ -26,36 +26,59 @@ function Projects({ projects }: Props) {
 
 			<div
 				className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
-                        scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#008080]/80"
+                        scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-blue-600/80"
 			>
 				{projects?.map((project, i) => (
-					<div key={i} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-						<motion.img initial={{ y: -300, opacity: 0 }} transition={{ duration: 1.2 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-								src={urlFor(project?.image).url()}
-								alt="Forum"
-								className="xl:w-[700px] xl:h-[350px] rounded-md mt-10">
-						</motion.img>
+					<div
+						key={i}
+						className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+					>
+						<motion.img
+							initial={{ y: -300, opacity: 0 }}
+							transition={{ duration: 1.2 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							src={urlFor(project?.image).url()}
+							alt="Forum"
+							className="xl:w-[700px] xl:h-[350px] rounded-md mt-10"
+						></motion.img>
 
-						<div className="space-y-5 px-0 md:px-10 max-w-6xl">
+						<div className="space-y-5 px-0 md:px-10 max-w-6xl flex flex-col items-center">
 							<h4 className="lg:text-4xl text-xl md:text-2xl font-semibold text-center">
 								{project?.title}
 							</h4>
-								<div className="flex items-center space-x-4 justify-center">
-									{project?.technologies.map((technology) => (
-										<img
-											className='lg:h-10 lg:w-10 h-8 w-8' 
-											key={technology._id}
-											src={urlFor(technology.image).url()}
-											alt=''/>
-									))}
-								</div>
+							<div className="flex items-center space-x-4 justify-center">
+								{project?.technologies.map((technology) => (
+									<img
+										className="lg:h-10 lg:w-10 h-8 w-8"
+										key={technology._id}
+										src={urlFor(technology.image).url()}
+										alt=""
+									/>
+								))}
+							</div>
 							<p className="text-sm md:text-base md:text-left text-center">
-							{project?.summary}
+								{project?.summary}
 							</p>
 							<Link
-							className='flex justify-center hover:text-blue-500 text-base lg:text-lg'
-							href={`${project.linkToBuild}`}>
-								{project.linkToBuild}
+								className="
+							px-6 
+							py-2 
+							border 
+							border-[#242424] 
+							rounded-full 
+							uppercase 
+							text-xs 
+							tracking-widest
+                		  text-gray-500 
+						    transition-all
+						  hover:border-blue-600 
+						    hover:text-blue-600 
+							hover:scale-110
+							"
+								href={`${project.linkToBuild}`}
+							>
+								Visit Project
 							</Link>
 						</div>
 					</div>

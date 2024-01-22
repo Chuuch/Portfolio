@@ -34,8 +34,8 @@ export default function About({ pageInfo }: Props) {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
           className='space-y-10 px-0 md:px-10'>
-            <h4 className='text-4xl font-semibold text-teal-600'>
-                Who am <span className='underline decoration-[#008080]/50'>I</span>?
+            <h4 className='text-4xl font-semibold text-blue-700'>
+                Who am I?
             </h4>
             <p className='text-sm xl:text-base md:text-sm  whitespace-pre-line xl:w-[600px]'>
             {pageInfo?.backgroundInformation}

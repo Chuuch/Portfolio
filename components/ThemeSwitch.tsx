@@ -38,9 +38,9 @@ const ThemeSwitch = () => {
 	return (
 		<button
 			onClick={toggleTheme}
-			className="flex items-center cursor-pointer hover:scale-110 text-teal-700"
+			className="flex items-center cursor-pointer hover:scale-110 text-[#9E9E9E]"
 		>
-			{theme === 'light' ? <BsMoon size={20} /> : <BsSun size={20} />}
+			{theme === 'light' ? <BsMoon size={18} /> : <BsSun size={20} />}
 		</button>
 	);
 };
