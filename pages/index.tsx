@@ -10,7 +10,7 @@ import Skills from '@/components/Skills';
 import Qualifications from '@/components/Qualifications';
 import ContactMe from '@/components/ContactMe';
 import Link from 'next/link';
-import Profile from '../public/Profile.jpg'
+import Profile from '@/public/Profile.jpg'
 import Image from 'next/image';
 import { Experience, PageInfo, Project, Skill, Social } from '@/typings';
 import { fetchPageInfo } from '@/utils/fetchPageInfo';
