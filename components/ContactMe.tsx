@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
 type Inputs = {
@@ -14,10 +13,13 @@ type Props = {};
 
 function ContactMe({}: Props) {
 
-    const { register, handleSubmit } = useForm<Inputs>();
+    const { register, handleSubmit, reset } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
         window.location.href = `mailto:daniel.chuchulev96@gmail?subject=${formData.subject}&body=
-        Hi, my name is ${formData.name}. ${formData.message}`;
+        Hi, my name is ${formData.name}.
+
+        ${formData.message}`;
+        reset();
     };
 
   return (
@@ -34,7 +36,8 @@ function ContactMe({}: Props) {
                 Let's link up!</span>
             </h4>
 
-            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
+            <form 
+            onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
                 <div className='flex space-x-2'>
                     <input {...register('name')} placeholder='Name' className='contactInput' type="text" />
                     <input {...register('email')} placeholder='Email' className='contactInput' type="email" />
@@ -44,7 +47,8 @@ function ContactMe({}: Props) {
 
                 <textarea {...register('message')} placeholder='Message' className='contactInput'/>
 
-                <button type='submit' className='bg-blue-600 py-5 px-10 rounded-md text-black font-bold text-lg'>
+                <button 
+                type='submit' className='bg-blue-600 py-5 px-10 rounded-md text-black font-bold text-lg'>
                     Submit
                 </button>
             </form>
