@@ -2,8 +2,6 @@
 import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from './BackgroundCircles';
-import Image from 'next/image';
-import Profile from '../public/Profile.jpg';
 import Link from 'next/link';
 import { PageInfo } from '@/typings';
 import { urlFor } from '@/sanity';
@@ -32,15 +30,15 @@ export default function Hero({ pageInfo }: Props) {
 				alt="heroImage"
 			/>
 			<div className="z-20">
-				<h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+				<h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[10px] lg:tracking-[15px]">
 					{pageInfo?.role}
 				</h2>
-				<h1 className="text-2xl md:text-3xl lg:text-6xl font-semibold px-10 text-blue-600 dark:text-[#ddd]">
+				<h1 className="text-2xl md:text-2xl lg:text-6xl font-semibold px-10 text-blue-600 dark:text-[#ddd]">
 					<span className="mr-3">{text}</span>
 					<Cursor cursorColor="#ddd" />
 				</h1>
 
-				<div className="pt-5 space-y-4">
+				<div className="pt-5 space-y-4 justify-evenly">
 					<Link href="#about">
 						<button className="heroButton">About</button>
 					</Link>

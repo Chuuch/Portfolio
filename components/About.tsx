@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import React from 'react'
-import about2 from '../public/about2.jpg'
 import { motion } from 'framer-motion'
 import { PageInfo } from '@/typings'
 import { urlFor } from '@/sanity'
@@ -14,7 +13,7 @@ export default function About({ pageInfo }: Props) {
   return (
     <div
         className='flex flex-col h-screen relative text-center md:left md:flex-row max-w-7xl px-10
-                    justify-evenly mx-auto items-center'>
+                  justify-center mx-auto items-center space-y-5'>
        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
             About
        </h3> 
@@ -24,7 +23,7 @@ export default function About({ pageInfo }: Props) {
             transition={{ duration: 1.2 }}
             whileInView={{ opacity: 1, x: 0}}
             viewport={{ once: true }}
-            className='-mb-20 md:mb-0 flex-shrink-0 w-[100px] h-[100px] rounded-full object-cover md:rounded-lg
+            className='mt-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg
             md:w-[300px] md:h-96 xl:w-[400px] xl:h-[500px]'
             src={urlFor(pageInfo?.profilePicture).url()} alt='about-photo'>
        </motion.img>

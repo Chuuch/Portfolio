@@ -2,15 +2,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-import telerik from '../public/telerik.png'
-import react from '../public/react.png'
-import tailwind from '../public/tailwind.png'
-import firebase from '../public/firebase.png'
-import javascript from '../public/javascript.png'
-import html from '../public/html.png'
-import css from '../public/css.png'
-import certificate from '../public/certificate.png'
 import { Experience } from '@/typings'
 import { urlFor } from '@/sanity'
 
@@ -20,7 +11,7 @@ type Props = {
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[350px] md:w-[500px] xl:w-[600px]
+    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[350px] md:w-[500px] lg:w-[600px] xl:w-[600px]
                         snap-center bg-gray-100 dark:bg-gray-900 p-10 cursor-pointer transition-opacity duration-200 overflow-hidden'>
         <motion.img
             initial={{ y: -100, opacity: 0 }}
@@ -28,7 +19,7 @@ function ExperienceCard({ experience }: Props) {
             whileInView={{ opacity: 1, y: 0}}
             viewport={{ once: true }}
             src={urlFor(experience?.companyImage).url()} alt='telerik'
-            className='h-32 w-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'>
+            className='h-32 w-32 rounded-full lg:h-32 lg:w-32 xl:w-[200px] xl:h-[200px] object-cover object-center'>
             
                     
         </motion.img>
