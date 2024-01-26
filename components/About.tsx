@@ -24,7 +24,7 @@ export default function About({ pageInfo }: Props) {
             transition={{ duration: 1.2 }}
             whileInView={{ opacity: 1, x: 0}}
             viewport={{ once: true }}
-            className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg
+            className='-mb-20 md:mb-0 flex-shrink-0 w-[100px] h-[100px] rounded-full object-cover md:rounded-lg
             md:w-[300px] md:h-96 xl:w-[400px] xl:h-[500px]'
             src={urlFor(pageInfo?.profilePicture).url()} alt='about-photo'>
        </motion.img>

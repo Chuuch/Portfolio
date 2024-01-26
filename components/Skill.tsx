@@ -20,7 +20,7 @@ function Skill({ directionLeft, skill }: Props) {
 				src={urlFor(skill?.image).url()}
 				alt="sanity"
 				className="rounded-full border border-gray-500 object-cover
-            w-24 h-24 md:w-24 md:h-24 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-300 ease-in-out"
+            w-16 h-16 md:w-24 md:h-24 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-300 ease-in-out"
 			></motion.img>
 
 			<div

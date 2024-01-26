@@ -40,7 +40,7 @@ function Projects({ projects }: Props) {
 							viewport={{ once: true }}
 							src={urlFor(project?.image).url()}
 							alt="Forum"
-							className="xl:w-[700px] xl:h-[350px] rounded-md mt-10"
+							className="xl:w-[700px] xl:h-[350px] w-56 h-32 rounded-md mt-10"
 						></motion.img>
 
 						<div className="space-y-5 px-0 md:px-10 max-w-6xl flex flex-col items-center">
@@ -57,7 +57,7 @@ function Projects({ projects }: Props) {
 									/>
 								))}
 							</div>
-							<p className="text-sm md:text-base md:text-left text-center">
+							<p className="text-xs md:text-base md:text-left text-center">
 								{project?.summary}
 							</p>
 							<Link

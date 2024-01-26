@@ -30,7 +30,7 @@ function ContactMe({}: Props) {
         </h3>
 
         <div className='flex flex-col space-y-32'>
-            <h4 className='text-4xl font-semibold text-center'>
+            <h4 className='lg:text-4xl md:text-3xl text-2xl font-semibold text-center'>
                 Like what your see?{' '} 
             <span className='decoration-[#008080]/50 underline'>
                 Let's link up!</span>
