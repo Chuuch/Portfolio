@@ -1,6 +1,6 @@
 'use client';
 
-import { BsMoon, BsSun } from 'react-icons/bs';
+import { IoMoon, IoSunny } from 'react-icons/io5';
 import { useEffect, useState } from 'react';
 
 type Theme = 'light' | 'dark';
@@ -38,9 +38,9 @@ const ThemeSwitch = () => {
 	return (
 		<button
 			onClick={toggleTheme}
-			className="flex items-center cursor-pointer hover:scale-110 text-[#9E9E9E]"
+			className="flex items-center cursor-pointer hover:scale-110 text-[#9E9E9E] transition"
 		>
-			{theme === 'light' ? <BsMoon size={18} /> : <BsSun size={20} />}
+			{theme === 'light' ? <IoMoon size={25} /> : <IoSunny size={25} />}
 		</button>
 	);
 };
