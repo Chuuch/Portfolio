@@ -29,7 +29,7 @@ function ContactMe({}: Props) {
             Contact
         </h3>
 
-        <div className='flex flex-col space-y-32'>
+        <div className='flex flex-col space-y-16'>
             <h4 className='lg:text-4xl md:text-3xl text-2xl font-semibold text-center'>
                 Like what your see?{' '} 
             <span className='decoration-[#008080]/50 underline'>
@@ -37,7 +37,7 @@ function ContactMe({}: Props) {
             </h4>
 
             <form 
-            onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
+            onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto text-sm'>
                 <div className='flex space-x-2'>
                     <input {...register('name')} placeholder='Name' className='contactInput' type="text" />
                     <input {...register('email')} placeholder='Email' className='contactInput' type="email" />
@@ -48,7 +48,7 @@ function ContactMe({}: Props) {
                 <textarea {...register('message')} placeholder='Message' className='contactInput'/>
 
                 <button 
-                type='submit' className='bg-blue-600 lg:py-5 lg:px-10 py-3 w-56 self-center rounded-md text-black font-bold text-lg'>
+                type='submit' className='bg-blue-600 lg:py-5 lg:px-10 py-3 w-56 self-center rounded-md text-black font-bold lg:text-lg text-base'>
                     Submit
                 </button>
             </form>

@@ -11,7 +11,7 @@ type Props = {
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[350px] md:w-[500px] lg:w-[600px] xl:w-[600px]
+    <article className='flex flex-col rounded-lg items-center space-y-4 flex-shrink-0 w-72 h-[420px] md:w-[500px] lg:w-[600px] xl:w-[600px]
                         snap-center bg-gray-100 dark:bg-gray-900 p-10 cursor-pointer transition-opacity duration-200 overflow-hidden'>
         <motion.img
             initial={{ y: -100, opacity: 0 }}
@@ -19,17 +19,17 @@ function ExperienceCard({ experience }: Props) {
             whileInView={{ opacity: 1, y: 0}}
             viewport={{ once: true }}
             src={urlFor(experience?.companyImage).url()} alt='telerik'
-            className='h-32 w-32 rounded-full lg:h-32 lg:w-32 xl:w-[200px] xl:h-[200px] object-cover object-center'>
+            className='h-16 w-16 rounded-full lg:h-32 lg:w-32 xl:w-[200px] xl:h-[200px] object-cover object-center'>
             
                     
         </motion.img>
 
         <div className='px-0 md:px-10 flex flex-col items-start'>
-            <h4 className='text-green-500 dark:text-green-600 lg:text-4xl md:text-3xl text-2xl font-light'>
+            <h4 className='text-green-500 dark:text-green-600 lg:text-4xl md:text-3xl text-xl font-light'>
                 {experience?.jobTitle}
             </h4>
 
-            <p className='font-bold text-lg md:text-2 lg:text-2xl mt-1'>
+            <p className='font-bold text-md md:text-2xl lg:text-2xl mt-1'>
                 {experience?.company}
             </p>
 
@@ -37,20 +37,20 @@ function ExperienceCard({ experience }: Props) {
                 {experience.technologies.map((technology) => (
                     <img 
                         key={technology._id}
-                        className='h-8 w-8 rounded-full'
+                        className='lg:h-8 md:w-8 h-6 w-6 rounded-full'
                         src={urlFor(technology.image).url()}/>
                 ))}
 
             </div>
 
-            <p className='uppercase py-5 text-gray-500 text-sm md:text-base'>
+            <p className='uppercase py-4 text-gray-500 text-xs md:text-base lg:text-base'>
                 {new Date(experience.dateStarted).toDateString()} - {" "}
                 {experience.isCurrentlyWorkingHere
                 ? 'Present'
                 : new Date(experience.dateEnded).toDateString()}
             </p>
 
-            <ul className='list-disc space-y-4 ml-5 text-base md:text-lg'>
+            <ul className='list-disc space-y-4 ml-5 lg:text-base md:text-lg text-xs'>
                {experience.points.map((point, index) => (
                 <li key={index}>
                     {point}

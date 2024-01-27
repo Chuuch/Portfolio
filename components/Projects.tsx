@@ -20,7 +20,7 @@ function Projects({ projects }: Props) {
 			className="h-screen flex flex-col overflow-hidden relative text-left md:flex-row max-w-full
                     mx-auto justify-evenly items-center z-0 "
 		>
-			<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+			<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 lg:text-2xl text-lg">
 				Projects
 			</h3>
 
@@ -31,7 +31,7 @@ function Projects({ projects }: Props) {
 				{projects?.map((project, i) => (
 					<div
 						key={i}
-						className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+						className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-10 md:p-44 h-screen"
 					>
 						<motion.img
 							initial={{ y: -300, opacity: 0 }}
@@ -40,24 +40,24 @@ function Projects({ projects }: Props) {
 							viewport={{ once: true }}
 							src={urlFor(project?.image).url()}
 							alt="Forum"
-							className="xl:w-[700px] xl:h-[350px] w-56 h-32 rounded-md mt-10"
+							className="xl:w-[700px] xl:h-[350px] w-[430px] h-[180px] rounded-md mt-10"
 						></motion.img>
 
-						<div className="space-y-5 px-0 md:px-10 max-w-6xl flex flex-col items-center">
-							<h4 className="lg:text-4xl text-xl md:text-2xl font-semibold text-center">
+						<div className="space-y-4 px-0 md:px-10 max-w-6xl flex flex-col items-center">
+							<h4 className="lg:text-4xl text-base md:text-2xl font-semibold text-center">
 								{project?.title}
 							</h4>
 							<div className="flex items-center space-x-4 justify-center">
 								{project?.technologies.map((technology) => (
 									<img
-										className="lg:h-10 lg:w-10 h-8 w-8"
+										className="lg:h-10 lg:w-10 h-6 w-6"
 										key={technology._id}
 										src={urlFor(technology.image).url()}
 										alt=""
 									/>
 								))}
 							</div>
-							<p className="text-xs md:text-base md:text-left text-center">
+							<p className="text-xs md:text-base md:text-left text-center w-80">
 								{project?.summary}
 							</p>
 							<Link
