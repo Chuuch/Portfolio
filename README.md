@@ -2,7 +2,6 @@
 # Portfolio
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/chuuch/portfolio/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/chuchulev/portfolio.svg)](https://github.com/chuuch/portfolio/issues)
 [![GitHub stars](https://img.shields.io/github/stars/chuuch/portfolio.svg)](https://github.com/chuuch/portfolio/stargazers)
 
 A professional portfolio showcasing my skills, projects, and experiences, built with NextJs, React, TypeScript, TailwindCss, Framer Motion, and Sanity CMS, and hosted on Vercel.
