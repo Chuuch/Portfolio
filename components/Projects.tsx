@@ -40,7 +40,17 @@ function Projects({ projects }: Props) {
 							viewport={{ once: true }}
 							src={urlFor(project?.image).url()}
 							alt="Forum"
-							className="xl:w-[700px] xl:h-[350px] w-[430px] h-[180px] rounded-md mt-10"
+							className="
+							xl:w-[700px] 
+							xl:h-[350px] 
+							lg:w-[700px] 
+							lg:h-[450px]
+							md:h-[350px] 
+							md:w-[600px] 
+							w-[430px] 
+							h-[180px] 
+							rounded-md 
+							mt-10"
 						></motion.img>
 
 						<div className="space-y-4 px-0 md:px-10 max-w-6xl flex flex-col items-center">
