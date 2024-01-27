@@ -14,13 +14,13 @@ function Skill({ directionLeft, skill }: Props) {
 	return (
 		<div className="group relative flex cursor-pointer">
 			<motion.img
-				initial={{ x: directionLeft ? -100 : 100, opacity: 0 }}
+				initial={{ x: directionLeft ? -80 : 80, opacity: 0 }}
 				transition={{ duration: 1 }}
 				whileInView={{ opacity: 1, x: 0 }}
 				src={urlFor(skill?.image).url()}
 				alt="sanity"
 				className="rounded-full border border-gray-500 object-cover
-            w-12 h-12 md:w-24 md:h-24 lg:w-24 lg:h-24 xl:w-28 xl:h-28 filter group-hover:grayscale transition duration-300 ease-in-out"
+            w-14 h-14 md:w-24 md:h-24 lg:w-24 lg:h-24 xl:w-24 xl:h-24 filter group-hover:grayscale transition duration-300 ease-in-out"
 			></motion.img>
 
 			<div

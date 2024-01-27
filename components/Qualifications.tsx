@@ -17,7 +17,7 @@ const Qualifications = () => {
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 1.5 }}
 				className="flex items-center justify-center">
-            <Image src={certificate} alt="certificate" className="lg:w-[700px] md:w-[400px] w-[300px]"/>
+            <Image src={certificate} alt="certificate" className="lg:w-[700px] md:w-[400px] w-[350px]"/>
             </motion.div>
 		</div>
 	);

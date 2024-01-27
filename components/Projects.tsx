@@ -31,7 +31,7 @@ function Projects({ projects }: Props) {
 				{projects?.map((project, i) => (
 					<div
 						key={i}
-						className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-10 md:p-44 h-screen"
+						className="w-screen flex-shrink-0 snap-center flex flex-col space-y-4 items-center justify-center p-10 md:p-44 h-screen"
 					>
 						<motion.img
 							initial={{ y: -300, opacity: 0 }}
@@ -57,19 +57,21 @@ function Projects({ projects }: Props) {
 									/>
 								))}
 							</div>
-							<p className="text-xs md:text-base md:text-left text-center w-80">
+							<p className="text-xs md:text-base md:text-left text-center w-full">
 								{project?.summary}
 							</p>
 							<Link
 								className="
-							px-6 
-							py-2 
+							px-4
+							py-2
+							lg:px-6 
+							lg:py-2 
 							border 
 							border-[#242424] 
 							rounded-full 
 							uppercase 
 							text-xs 
-							tracking-widest
+							tracking-[2px]
                 		  text-gray-500 
 						    transition-all
 						  hover:border-blue-600 
