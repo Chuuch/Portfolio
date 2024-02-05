@@ -12,7 +12,7 @@
 
     .contactInput {
         @apply outline-none bg-slate-400/10 rounded-sm border-b lg:px-6 lg:py-4 px-1 py-3 border-[#242424]
-        text-gray-500 placeholder-gray-500 transition-all focus:border-blue-600/40 focus:text-blue-600/40
-        hover:border-blue-600/40
+        text-gray-500 placeholder-gray-500 transition-all focus:border-secondary-600/40 focus:text-secondary-600
+        hover:border-secondary-600/40
     }
 }

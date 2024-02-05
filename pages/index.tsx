@@ -9,8 +9,7 @@ import Skills from '@/components/Skills';
 import Qualifications from '@/components/Qualifications';
 import ContactMe from '@/components/ContactMe';
 import Link from 'next/link';
-import Profile from '@/public/Profile.jpg';
-import Image from 'next/image';
+import { FaArrowUp } from 'react-icons/fa'
 import { Experience, PageInfo, Project, Skill, Social } from '@/typings';
 import { fetchPageInfo } from '@/utils/fetchPageInfo';
 import { fetchExperiences } from '@/utils/fetchExperiences';
@@ -29,8 +28,8 @@ type Props = {
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 	return (
 		<div
-			className="bg-gray-200 dark:bg-[#00001a] text-gray-500 h-screen snap-y snap-mandatory overflow-y-scroll z-0
-                      overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-blue-600 dark:scrollbar-thumb-blue-600"
+			className="bg-gray-200 dark:bg-[#121212] text-gray-500 h-screen snap-y snap-mandatory overflow-y-scroll z-0
+                      overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-primary-600 dark:scrollbar-thumb-primary-600"
 		>
 			<Head>
 				<title>{pageInfo.name}</title>
@@ -69,11 +68,12 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 			<Link href="#hero">
 				<footer className="sticky bottom-5 w-full cursor-pointer">
 					<div className="flex items-center justify-center">
-						<Image
-							src={Profile}
-							alt="profile"
-							className="w-10 h-10 filter grayscale hover:grayscale-0 cursor-pointer rounded-full justify-center"
-						/>
+						<div className='
+						flex items-center justify-center
+						rounded-full bg-gradient-to-tr from-primary-500 to bg-secondary-500
+						w-10 h-10 hover:scale-110 dark:text-gray-200'>
+							<FaArrowUp />
+						</div>
 					</div>
 				</footer>
 			</Link>

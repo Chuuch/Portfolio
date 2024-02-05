@@ -26,7 +26,7 @@ function Projects({ projects }: Props) {
 
 			<div
 				className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
-                        scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-blue-600/80"
+                        scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-primary-600/80"
 			>
 				{projects?.map((project, i) => (
 					<div
@@ -47,7 +47,7 @@ function Projects({ projects }: Props) {
 							lg:h-[450px]
 							md:h-[350px] 
 							md:w-[600px] 
-							w-[430px] 
+							w-[330px] 
 							h-[180px] 
 							rounded-md 
 							mt-10"
@@ -84,8 +84,8 @@ function Projects({ projects }: Props) {
 							tracking-[2px]
                 		  text-gray-500 
 						    transition-all
-						  hover:border-blue-600 
-						    hover:text-blue-600 
+						  hover:border-primary-600 
+						    hover:text-primary-600 
 							hover:scale-110
 							"
 								href={`${project.linkToBuild}`}
@@ -97,7 +97,7 @@ function Projects({ projects }: Props) {
 				))}
 			</div>
 
-			<div className="w-full absolute -skew-y-12 top-[30%] bg-[#008080]/10 left-0 h-[500px]"></div>
+			<div className="w-full absolute -skew-y-12 top-[30%] bg-gradient-to-r from-primary-400 to-secondary-600 left-0 h-[500px] opacity-5"></div>
 		</motion.div>
 	);
 }

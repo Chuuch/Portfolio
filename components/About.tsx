@@ -33,8 +33,10 @@ export default function About({ pageInfo }: Props) {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
           className='space-y-10 px-0 md:px-10'>
-            <h4 className='text-4xl font-semibold text-blue-700'>
+            <h4 className='text-4xl font-extrabold'>
+              <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600'>
                 Who am I?
+              </span>
             </h4>
             <p className='text-sm xl:text-base md:text-sm  whitespace-pre-line xl:w-[600px]'>
             {pageInfo?.backgroundInformation}
