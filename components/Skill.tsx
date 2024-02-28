@@ -26,7 +26,9 @@ function Skill({ directionLeft, skill }: Props) {
                         group-hover:bg-white h-14 w-14 md:w-24 md:h-24 lg:w-24 lg:h-24 xl:w-24 xl:h-24 rounded-full z-0"
 			>
 				<div className="flex items-center justify-center h-full">
-					<p className="text-3xl font-bold text-black opacity-100">{skill.progress}%</p>
+					<p className="lg:text-3xl md:text-2xl text-xl font-bold text-black opacity-100">
+						{skill.progress}%
+					</p>
 				</div>
 			</div>
 		</div>
