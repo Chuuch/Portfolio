@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import sanity from '../public/sanity.png';
 import { Skill } from '@/typings';
 import { urlFor } from '@/sanity';
 
